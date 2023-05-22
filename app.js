@@ -25,6 +25,10 @@ const isEven = (mathString) => {
 const checkString = (myString) => {
     const firstString = myString.charAt(0);
     const lastString = myString.charAt(myString.length - 1);
+    const alphabets = new RegExp(/[a-zA-Z]/g);
+    if (alphabets.test(myString)){
+        return false;
+    }
     if(myString.includes("*") || myString.includes("/")){
         return false;
     }
